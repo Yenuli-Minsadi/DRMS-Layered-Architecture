@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dog_rescue_management_system.controller.LogInController">
+   <children>
+      <AnchorPane fx:id="ancLogin" prefHeight="166.0" prefWidth="705.0" style="-fx-background-color: #1B1464;" StackPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="166.0" prefWidth="705.0" style="-fx-background-color: #130f40;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="229.0" fitWidth="253.0" layoutX="219.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hphh.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+            <AnchorPane layoutY="163.0" prefHeight="452.0" prefWidth="700.0" style="-fx-background-color: #130f40; -fx-background-image: F:\IJSE-GDSE73\OOP_FINAL_PROJECT1\dog_rescue_management_system\src\main\resources\images\logo.png;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="134.0">
+               <children>
+                  <TextField fx:id="txtUsername" layoutX="285.0" layoutY="135.0" onKeyPressed="#handleKeyPressed" prefHeight="25.0" prefWidth="214.0" promptText="username" style="-fx-background-radius: 13;" AnchorPane.bottomAnchor="313.0" AnchorPane.leftAnchor="285.0" AnchorPane.rightAnchor="203.0" AnchorPane.topAnchor="135.0">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="31.23" radius="14.807500000000001" width="30.0" />
+                     </effect>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="pwdPassword" layoutX="285.0" layoutY="183.0" onKeyPressed="#handleKeyPressed" prefHeight="25.0" prefWidth="214.0" promptText="password" style="-fx-background-radius: 13;" AnchorPane.bottomAnchor="265.0" AnchorPane.leftAnchor="285.0" AnchorPane.rightAnchor="203.0" AnchorPane.topAnchor="183.0">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="18.0" radius="11.5" width="30.0" />
+                     </effect>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </PasswordField>
+                  <Label layoutX="206.0" layoutY="138.0" text="Username" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Semilight" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="209.0" layoutY="186.0" text="Password" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Semilight" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="loginButton" layoutX="426.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnLogInOnAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #130f40; -fx-border-color: #fff; -fx-border-radius: 5;" stylesheets="@style.css" text="Log In" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="447.0" layoutY="328.0" onMouseClicked="#lblForgotPasswordOnMouseClicked" styleClass="clickable-label" text="Forgot Password?" textFill="#acaeb2">
+                     <font>
+                        <Font name="Microsoft PhagsPa" size="12.0" />
+                     </font>
+                  </Label>
+                  <Line endX="1.1641845703125" endY="198.0" layoutX="540.0" layoutY="122.0" startX="1.1641845703125" startY="-38.9141845703125" stroke="WHITE" strokeLineJoin="ROUND" />
+                  <Line endX="25.0" layoutX="264.0" layoutY="84.0" startX="-102.10354614257812" stroke="WHITE" strokeLineJoin="ROUND" />
+                  <Line endX="365.6641845703125" endY="-27.5" layoutX="175.0" layoutY="348.0" startX="-13.0" startY="-27.5" stroke="WHITE" strokeLineJoin="ROUND" />
+                  <Line endX="37.5" endY="83.0" layoutX="124.0" layoutY="237.0" startX="37.29290771484375" startY="-152.29290771484375" stroke="WHITE" strokeLineJoin="ROUND" />
+                  <Line endX="44.0" layoutX="496.0" layoutY="83.0" startX="-80.0" stroke="WHITE" strokeLineJoin="ROUND" />
+                  <Label blendMode="SRC_ATOP" layoutX="295.0" layoutY="58.0" prefHeight="44.0" prefWidth="138.0" text="Welcome" textFill="#8fe7ff">
+                     <font>
+                        <Font name="Segoe UI Semilight" size="28.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="TWO_PASS_BOX" height="8.32" radius="10.6925" width="36.45" />
+                     </effect>
+                  </Label>
+                  <Label layoutX="224.0" layoutY="-22.0" prefHeight="73.0" prefWidth="253.0" text="Happy Paws Happy Hearts" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Semilight" size="22.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <Label layoutX="163.0" layoutY="328.0" text="Create an Account" textFill="#acaeb2" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

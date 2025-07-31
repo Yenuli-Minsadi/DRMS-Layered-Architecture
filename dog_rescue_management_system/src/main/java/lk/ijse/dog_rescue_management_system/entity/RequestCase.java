@@ -1,0 +1,23 @@
+package lk.ijse.dog_rescue_management_system.entity;
+
+import lombok.*;
+
+import java.time.LocalDate;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+@ToString
+public class RequestCase {
+    private String requestId;
+    private String rescuerId;
+    private String location;
+    private String reason;
+    private String caseType;
+    private String urgencyLevel;
+    private LocalDate requestDate;
+    private String requestStatus;
+    private String requestNote;
+    private String requestContact;
+}
