@@ -1,17 +1,12 @@
 package lk.ijse.dog_rescue_management_system.bo.custom.impl;
 
 import lk.ijse.dog_rescue_management_system.bo.custom.AdoptionProcessBO;
-import lk.ijse.dog_rescue_management_system.dao.custom.AdminDAO;
 import lk.ijse.dog_rescue_management_system.dao.custom.AdoptionProcessDAO;
-import lk.ijse.dog_rescue_management_system.dao.custom.DAOFactory;
-import lk.ijse.dog_rescue_management_system.dao.custom.impl.AdoptionProcessDAOImpl;
+import lk.ijse.dog_rescue_management_system.dao.DAOFactory;
 import lk.ijse.dog_rescue_management_system.db.DBConnection;
 import lk.ijse.dog_rescue_management_system.dto.AdoptionProcessDto;
-import lk.ijse.dog_rescue_management_system.util.CrudUtil;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -26,11 +21,6 @@ public class AdoptionProcessBOImpl implements AdoptionProcessBO {
     @Override
     public String getNextId() throws Exception {
         return adoptionProcessDAO.getNextId();
-    }
-
-    @Override
-    public int getAdoptedDogCount() throws SQLException, ClassNotFoundException {
-       return adoptionProcessDAO.getAdoptedDogCount();
     }
 
     @Override

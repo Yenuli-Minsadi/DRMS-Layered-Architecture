@@ -1,4 +1,4 @@
-package lk.ijse.dog_rescue_management_system.dao.custom;
+package lk.ijse.dog_rescue_management_system.dao;
 
 import lk.ijse.dog_rescue_management_system.dao.custom.impl.*;
 
@@ -24,7 +24,7 @@ public class DAOFactory {
         REQUESTCASE,
         RESCUER,
         SHELTER,
-        USER,
+        QUERY,
         VET
 
 
@@ -54,8 +54,8 @@ public class DAOFactory {
                 return new RescuerDAOImpl();
             case SHELTER:
                 return new ShelterDAOImpl();
-            case USER:
-                return new UserDAOImpl();
+            case QUERY:
+                return new QueryDAOImpl();
             case VET:
                 return new VetDAOImpl();
             default:

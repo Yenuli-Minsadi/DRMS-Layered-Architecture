@@ -2,9 +2,8 @@ package lk.ijse.dog_rescue_management_system.dao.custom.impl;
 
 import lk.ijse.dog_rescue_management_system.dao.custom.AppointmentDAO;
 import lk.ijse.dog_rescue_management_system.db.DBConnection;
-import lk.ijse.dog_rescue_management_system.dto.AppointmentDto;
 import lk.ijse.dog_rescue_management_system.entity.Appointment;
-import lk.ijse.dog_rescue_management_system.util.CrudUtil;
+import lk.ijse.dog_rescue_management_system.dao.CrudUtil;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -101,19 +100,5 @@ public class AppointmentDAOImpl implements AppointmentDAO {
         }
         return tableString + "001";
     }
-
-    @Override
-    public int getScheduledAppointmentCount() throws SQLException, ClassNotFoundException {
-        ResultSet resultSet = CrudUtil.execute(
-                "SELECT COUNT(*) FROM appointments WHERE status = 'Scheduled'"
-        );
-
-        if (resultSet.next()) {
-            return resultSet.getInt(1);
-        }
-
-        return 0;
-    }
-
 
 }

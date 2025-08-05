@@ -8,11 +8,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import lk.ijse.dog_rescue_management_system.bo.custom.BOFactory;
+import lk.ijse.dog_rescue_management_system.bo.BOFactory;
 import lk.ijse.dog_rescue_management_system.bo.custom.VetBO;
-import lk.ijse.dog_rescue_management_system.bo.custom.impl.VetBOImpl;
-import lk.ijse.dog_rescue_management_system.dao.custom.VetDAO;
-import lk.ijse.dog_rescue_management_system.dao.custom.impl.VetDAOImpl;
 import lk.ijse.dog_rescue_management_system.dto.VetDto;
 import lk.ijse.dog_rescue_management_system.view.tdm.VetTM;
 

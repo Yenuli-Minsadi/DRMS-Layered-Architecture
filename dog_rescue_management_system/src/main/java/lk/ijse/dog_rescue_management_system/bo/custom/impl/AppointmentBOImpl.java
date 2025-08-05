@@ -1,16 +1,10 @@
 package lk.ijse.dog_rescue_management_system.bo.custom.impl;
 
 import lk.ijse.dog_rescue_management_system.bo.custom.AppointmentBO;
-import lk.ijse.dog_rescue_management_system.dao.custom.AdminDAO;
 import lk.ijse.dog_rescue_management_system.dao.custom.AppointmentDAO;
-import lk.ijse.dog_rescue_management_system.dao.custom.DAOFactory;
-import lk.ijse.dog_rescue_management_system.dao.custom.impl.AppointmentDAOImpl;
-import lk.ijse.dog_rescue_management_system.db.DBConnection;
-import lk.ijse.dog_rescue_management_system.dto.AdopterDto;
+import lk.ijse.dog_rescue_management_system.dao.DAOFactory;
 import lk.ijse.dog_rescue_management_system.dto.AppointmentDto;
-import lk.ijse.dog_rescue_management_system.entity.Adopter;
 import lk.ijse.dog_rescue_management_system.entity.Appointment;
-import lk.ijse.dog_rescue_management_system.util.CrudUtil;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -54,11 +48,5 @@ public class AppointmentBOImpl implements AppointmentBO {
     public String getNextAppointmentId() throws Exception {
         return appointmentDAO.getNextId();
     }
-
-    @Override
-    public int getScheduledAppointmentCount() throws SQLException, ClassNotFoundException {
-       return appointmentDAO.getScheduledAppointmentCount();
-    }
-
 
 }

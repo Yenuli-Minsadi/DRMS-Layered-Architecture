@@ -1,5 +1,6 @@
 package lk.ijse.dog_rescue_management_system.bo.custom;
 
+import lk.ijse.dog_rescue_management_system.bo.SuperBO;
 import lk.ijse.dog_rescue_management_system.dto.MedicalRecordDto;
 
 import java.sql.SQLException;

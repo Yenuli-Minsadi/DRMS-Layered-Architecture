@@ -2,9 +2,8 @@ package lk.ijse.dog_rescue_management_system.dao.custom.impl;
 
 import lk.ijse.dog_rescue_management_system.dao.custom.DogDAO;
 import lk.ijse.dog_rescue_management_system.db.DBConnection;
-import lk.ijse.dog_rescue_management_system.dto.DogDto;
 import lk.ijse.dog_rescue_management_system.entity.Dog;
-import lk.ijse.dog_rescue_management_system.util.CrudUtil;
+import lk.ijse.dog_rescue_management_system.dao.CrudUtil;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -120,14 +119,5 @@ public class DogDAOImpl implements DogDAO {
             return nextIdString;
         }
         return tableString + "001";
-    }
-
-    @Override
-    public int getDogCount() throws SQLException, ClassNotFoundException {
-        ResultSet rs = CrudUtil.execute("SELECT COUNT(*) FROM dog");
-        if (rs.next()) {
-            return rs.getInt(1);
-        }
-        return 0;
     }
 }

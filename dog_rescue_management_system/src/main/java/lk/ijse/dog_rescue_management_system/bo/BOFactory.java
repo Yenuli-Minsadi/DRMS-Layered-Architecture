@@ -1,4 +1,4 @@
-package lk.ijse.dog_rescue_management_system.bo.custom;
+package lk.ijse.dog_rescue_management_system.bo;
 
 import lk.ijse.dog_rescue_management_system.bo.custom.impl.*;
 
@@ -26,7 +26,7 @@ public class BOFactory {
         REQUESTCASE,
         RESCUER,
         SHELTER,
-        USER,
+        QUERY,
         VET
     }
 
@@ -54,8 +54,8 @@ public class BOFactory {
                 return new RescuerBOImpl();
             case SHELTER:
                 return new ShelterBOImpl();
-            case USER:
-                return new UserBOImpl();
+            case QUERY:
+                return new QueryBOImpl();
             case VET:
                 return new VetBOImpl();
             default:

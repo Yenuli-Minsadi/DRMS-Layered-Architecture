@@ -1,12 +1,9 @@
 package lk.ijse.dog_rescue_management_system.dao.custom.impl;
 
 import lk.ijse.dog_rescue_management_system.dao.custom.AdoptionProcessDAO;
-import lk.ijse.dog_rescue_management_system.db.DBConnection;
 import lk.ijse.dog_rescue_management_system.dto.AdoptionProcessDto;
-import lk.ijse.dog_rescue_management_system.util.CrudUtil;
+import lk.ijse.dog_rescue_management_system.dao.CrudUtil;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -49,17 +46,6 @@ public class AdoptionProcessDAOImpl implements AdoptionProcessDAO {
             return nextIdString;
         }
         return tableString + "001";
-    }
-
-    @Override
-    public int getAdoptedDogCount() throws SQLException, ClassNotFoundException {
-        ResultSet rs = CrudUtil.execute(
-                "SELECT COUNT(DISTINCT dog_id) FROM adoption_process WHERE adoption_status IN ('Approved', 'Completed')"
-        );
-        if (rs.next()) {
-            return rs.getInt(1);
-        }
-        return 0;
     }
 
     @Override

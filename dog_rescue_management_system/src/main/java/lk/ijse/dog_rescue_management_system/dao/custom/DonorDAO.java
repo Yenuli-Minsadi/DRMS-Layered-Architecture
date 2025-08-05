@@ -1,10 +1,8 @@
 package lk.ijse.dog_rescue_management_system.dao.custom;
 
-import lk.ijse.dog_rescue_management_system.dto.DonorDto;
+import lk.ijse.dog_rescue_management_system.dao.CrudDAO;
 import lk.ijse.dog_rescue_management_system.entity.Donor;
-import lk.ijse.dog_rescue_management_system.util.CrudUtil;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 

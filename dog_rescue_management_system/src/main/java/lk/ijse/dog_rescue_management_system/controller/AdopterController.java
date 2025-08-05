@@ -14,10 +14,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import lk.ijse.dog_rescue_management_system.bo.custom.AdopterBO;
-import lk.ijse.dog_rescue_management_system.bo.custom.BOFactory;
-import lk.ijse.dog_rescue_management_system.bo.custom.impl.AdopterBOImpl;
-import lk.ijse.dog_rescue_management_system.dao.custom.AdopterDAO;
-import lk.ijse.dog_rescue_management_system.dao.custom.impl.AdopterDAOImpl;
+import lk.ijse.dog_rescue_management_system.bo.BOFactory;
 import lk.ijse.dog_rescue_management_system.dto.AdopterDto;
 
 import lk.ijse.dog_rescue_management_system.view.tdm.AdopterTM;

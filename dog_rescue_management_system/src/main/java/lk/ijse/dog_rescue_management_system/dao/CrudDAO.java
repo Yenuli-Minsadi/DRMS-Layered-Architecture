@@ -1,6 +1,4 @@
-package lk.ijse.dog_rescue_management_system.dao.custom;
-
-import lk.ijse.dog_rescue_management_system.dto.AdopterDto;
+package lk.ijse.dog_rescue_management_system.dao;
 
 import java.sql.SQLException;
 import java.util.ArrayList;

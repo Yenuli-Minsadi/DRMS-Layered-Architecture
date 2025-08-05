@@ -1,13 +1,8 @@
 package lk.ijse.dog_rescue_management_system.dao.custom;
 
-import lk.ijse.dog_rescue_management_system.db.DBConnection;
-import lk.ijse.dog_rescue_management_system.dto.DogDto;
+import lk.ijse.dog_rescue_management_system.dao.CrudDAO;
 import lk.ijse.dog_rescue_management_system.entity.Dog;
-import lk.ijse.dog_rescue_management_system.util.CrudUtil;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -23,5 +18,4 @@ public interface DogDAO extends CrudDAO<Dog> {
 
     public String getNextId() throws Exception;
 
-    public int getDogCount() throws SQLException, ClassNotFoundException;
 }

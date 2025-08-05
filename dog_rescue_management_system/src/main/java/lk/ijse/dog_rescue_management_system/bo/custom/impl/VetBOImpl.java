@@ -1,17 +1,11 @@
 package lk.ijse.dog_rescue_management_system.bo.custom.impl;
 
 import lk.ijse.dog_rescue_management_system.bo.custom.VetBO;
-import lk.ijse.dog_rescue_management_system.dao.custom.AdminDAO;
-import lk.ijse.dog_rescue_management_system.dao.custom.DAOFactory;
+import lk.ijse.dog_rescue_management_system.dao.DAOFactory;
 import lk.ijse.dog_rescue_management_system.dao.custom.VetDAO;
-import lk.ijse.dog_rescue_management_system.dao.custom.impl.VetDAOImpl;
-import lk.ijse.dog_rescue_management_system.dto.AdopterDto;
 import lk.ijse.dog_rescue_management_system.dto.VetDto;
-import lk.ijse.dog_rescue_management_system.entity.Adopter;
 import lk.ijse.dog_rescue_management_system.entity.Vet;
-import lk.ijse.dog_rescue_management_system.util.CrudUtil;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 

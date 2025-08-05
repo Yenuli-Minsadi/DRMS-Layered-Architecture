@@ -5,15 +5,11 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.PieChart;
-import lk.ijse.dog_rescue_management_system.bo.custom.BOFactory;
+import lk.ijse.dog_rescue_management_system.bo.BOFactory;
 import lk.ijse.dog_rescue_management_system.bo.custom.DonorBO;
 import lk.ijse.dog_rescue_management_system.bo.custom.ExpenseBO;
 import lk.ijse.dog_rescue_management_system.bo.custom.impl.DonorBOImpl;
 import lk.ijse.dog_rescue_management_system.bo.custom.impl.ExpenseBOImpl;
-import lk.ijse.dog_rescue_management_system.dao.custom.DonorDAO;
-import lk.ijse.dog_rescue_management_system.dao.custom.ExpenseDAO;
-import lk.ijse.dog_rescue_management_system.dao.custom.impl.DonorDAOImpl;
-import lk.ijse.dog_rescue_management_system.dao.custom.impl.ExpenseDAOImpl;
 import lk.ijse.dog_rescue_management_system.dto.DonorDto;
 import lk.ijse.dog_rescue_management_system.dto.ExpenseDto;
 

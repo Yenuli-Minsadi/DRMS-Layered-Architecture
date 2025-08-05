@@ -16,8 +16,13 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import lk.ijse.dog_rescue_management_system.dao.custom.UserDAO;
-import lk.ijse.dog_rescue_management_system.dao.custom.impl.UserDAOImpl;
+import lk.ijse.dog_rescue_management_system.bo.BOFactory;
+import lk.ijse.dog_rescue_management_system.bo.custom.MedicalRecordBO;
+import lk.ijse.dog_rescue_management_system.bo.custom.QueryBO;
+import lk.ijse.dog_rescue_management_system.dao.custom.QueryDAO;
+//import lk.ijse.dog_rescue_management_system.dao.custom.UserDAO;
+import lk.ijse.dog_rescue_management_system.dao.custom.impl.QueryDAOImpl;
+//import lk.ijse.dog_rescue_management_system.dao.custom.impl.UserDAOImpl;
 import lk.ijse.dog_rescue_management_system.dto.UserDto;
 import lk.ijse.dog_rescue_management_system.util.SessionManager;
 
@@ -39,7 +44,9 @@ public class LogInController {
     private TextField txtUsername;
 
 //    private final UserModel userModel = new UserModel();
-    UserDAO userDAO = new UserDAOImpl();
+//    UserDAO userDAO = new UserDAOImpl();
+//    QueryDAO queryDAO = new QueryDAOImpl();
+QueryBO queryBO = (QueryBO) BOFactory.getBoFactory().getBo(BOFactory.BOTypes.QUERY);
 
     @FXML
     public void initialize() {
@@ -96,7 +103,7 @@ public class LogInController {
 
         try {
             // Authenticate user without specifying role - we'll determine it from the database
-            UserDto authenticatedUser = userDAO.authenticateUser(username, password);
+            UserDto authenticatedUser = queryBO.authenticateUser(username, password);
 
             if (authenticatedUser != null) {
                 // Set current user in session

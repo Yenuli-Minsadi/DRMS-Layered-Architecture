@@ -1,9 +1,8 @@
 package lk.ijse.dog_rescue_management_system.dao.custom.impl;
 
 import lk.ijse.dog_rescue_management_system.dao.custom.AdminDAO;
-import lk.ijse.dog_rescue_management_system.dto.AdminDto;
 import lk.ijse.dog_rescue_management_system.entity.Admin;
-import lk.ijse.dog_rescue_management_system.util.CrudUtil;
+import lk.ijse.dog_rescue_management_system.dao.CrudUtil;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

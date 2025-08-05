@@ -2,9 +2,8 @@ package lk.ijse.dog_rescue_management_system.dao.custom.impl;
 
 import lk.ijse.dog_rescue_management_system.dao.custom.RequestCaseDAO;
 import lk.ijse.dog_rescue_management_system.db.DBConnection;
-import lk.ijse.dog_rescue_management_system.dto.RequestCaseDto;
 import lk.ijse.dog_rescue_management_system.entity.RequestCase;
-import lk.ijse.dog_rescue_management_system.util.CrudUtil;
+import lk.ijse.dog_rescue_management_system.dao.CrudUtil;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

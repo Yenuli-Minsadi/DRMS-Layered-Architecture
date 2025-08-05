@@ -1,7 +1,7 @@
 package lk.ijse.dog_rescue_management_system.bo.custom;
 
+import lk.ijse.dog_rescue_management_system.bo.SuperBO;
 import lk.ijse.dog_rescue_management_system.dto.DogDto;
-import net.sf.jasperreports.components.subreport.fill.SubreportElementAdapter;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -17,6 +17,4 @@ public interface DogBO extends SuperBO {
     public ArrayList<DogDto> getAllDogs() throws SQLException, ClassNotFoundException;
 
     public String getNextDogId() throws Exception;
-
-    public int getDogCount() throws SQLException, ClassNotFoundException;
 }
