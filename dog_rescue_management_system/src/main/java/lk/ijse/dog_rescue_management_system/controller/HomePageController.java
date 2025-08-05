@@ -36,7 +36,7 @@ public class HomePageController implements Initializable {
 //    AdoptionProcessDAO adoptionProcessDAO = new AdoptionProcessDAOImpl();
     QueryBO queryBO = (QueryBO) BOFactory.getBoFactory().getBo(BOFactory.BOTypes.QUERY);
 //    private final AppointmentModel appointmentModel = new AppointmentModel();
-    AppointmentDAO appointmentDAO = new AppointmentDAOImpl();
+//    AppointmentDAO appointmentDAO = new AppointmentDAOImpl();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
