@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -32,6 +33,9 @@ import java.sql.SQLException;
 public class LogInController {
 
     @FXML
+    private Label lblCreateAccount;
+
+    @FXML
     private AnchorPane ancLogin;
 
     @FXML
@@ -47,6 +51,21 @@ public class LogInController {
 //    UserDAO userDAO = new UserDAOImpl();
 //    QueryDAO queryDAO = new QueryDAOImpl();
 QueryBO queryBO = (QueryBO) BOFactory.getBoFactory().getBo(BOFactory.BOTypes.QUERY);
+
+    @FXML
+    void lblSignUpOnAction(MouseEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/CreateAcc.fxml"));
+        Parent load = loader.load();
+
+        Stage signUpStage = new Stage();
+        signUpStage.setTitle("SignUp");
+        Image icon = new Image(getClass().getResourceAsStream("/images/logo2.png"));
+        signUpStage.getIcons().add(icon);
+        signUpStage.setScene(new Scene(load));
+        signUpStage.initModality(Modality.APPLICATION_MODAL);
+        signUpStage.show();
+    }
+
 
     @FXML
     public void initialize() {
@@ -200,4 +219,5 @@ QueryBO queryBO = (QueryBO) BOFactory.getBoFactory().getBo(BOFactory.BOTypes.QUE
         alert.setContentText(message);
         alert.showAndWait();
     }
+
 }

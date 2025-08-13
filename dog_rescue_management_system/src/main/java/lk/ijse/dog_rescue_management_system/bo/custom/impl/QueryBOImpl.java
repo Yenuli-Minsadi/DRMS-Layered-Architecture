@@ -34,23 +34,23 @@ public class QueryBOImpl implements QueryBO {
     }
 
 
-    @Override
-    public boolean checkLogin(UserDto userDto) throws SQLException, ClassNotFoundException {
-        return false;
-    }
+//    @Override
+//    public boolean checkLogin(UserDto userDto) throws SQLException, ClassNotFoundException {
+//        return false;
+//    }
 
-    @Override
-    public UserDto getUserById(String userId) throws SQLException, ClassNotFoundException {
-        return null;
-    }
-
-    @Override
-    public boolean updatePassword(String username, String newPassword) throws SQLException, ClassNotFoundException {
-        return false;
-    }
-
-    @Override
-    public List<UserDto> getAllUsers() throws SQLException, ClassNotFoundException {
-        return List.of();
-    }
+//    @Override
+//    public UserDto getUserById(String userId) throws SQLException, ClassNotFoundException {
+//        return null;
+//    }
+//
+//    @Override
+//    public boolean updatePassword(String username, String newPassword) throws SQLException, ClassNotFoundException {
+//        return false;
+//    }
+//
+//    @Override
+//    public List<UserDto> getAllUsers() throws SQLException, ClassNotFoundException {
+//        return List.of();
+//    }
 }

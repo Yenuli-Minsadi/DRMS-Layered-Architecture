@@ -15,4 +15,5 @@ public class UserDto {
     private String userAddress;
     private String userPassword;
     private String userRole; //"admin", "vet", "owner"
+
 }

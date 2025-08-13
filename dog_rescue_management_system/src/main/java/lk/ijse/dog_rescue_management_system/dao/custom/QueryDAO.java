@@ -11,8 +11,8 @@ public interface QueryDAO extends SuperDAO {
     public int getAdoptedDogCount() throws SQLException, ClassNotFoundException;
     public int getDogCount() throws SQLException, ClassNotFoundException;
     public int getScheduledAppointmentCount() throws SQLException, ClassNotFoundException;
-    public boolean checkLogin(UserDto userDto) throws SQLException, ClassNotFoundException;
-    public UserDto getUserById(String userId) throws SQLException, ClassNotFoundException;
-    public boolean updatePassword(String username, String newPassword) throws SQLException, ClassNotFoundException;
-    public List<UserDto> getAllUsers() throws SQLException, ClassNotFoundException;
+//    public boolean checkLogin(UserDto userDto) throws SQLException, ClassNotFoundException;
+//    public UserDto getUserById(String userId) throws SQLException, ClassNotFoundException;
+//    public boolean updatePassword(String username, String newPassword) throws SQLException, ClassNotFoundException;
+//    public List<UserDto> getAllUsers() throws SQLException, ClassNotFoundException;
 }

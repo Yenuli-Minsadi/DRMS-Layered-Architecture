@@ -50,13 +50,7 @@ public class QueryDAOImpl implements QueryDAO {
      * @throws SQLException if database error occurs
      * @throws ClassNotFoundException if driver not found
      */
-    @Override
-    public boolean checkLogin(UserDto userDto) throws SQLException, ClassNotFoundException {
-        String sql = "SELECT * FROM users WHERE name = ? AND password = ?";
-        ResultSet resultSet = CrudUtil.execute(sql, userDto.getUserName(), userDto.getUserPassword());
 
-        return resultSet.next(); // Returns true if a matching user is found
-    }
 
     /**
      * Retrieves user by ID
@@ -65,23 +59,6 @@ public class QueryDAOImpl implements QueryDAO {
      * @throws SQLException if database error occurs
      * @throws ClassNotFoundException if driver not found
      */
-    @Override
-    public UserDto getUserById(String userId) throws SQLException, ClassNotFoundException {
-        String sql = "SELECT * FROM users WHERE user_id = ?";
-        ResultSet resultSet = CrudUtil.execute(sql, userId);
-
-        if (resultSet.next()) {
-            UserDto user = new UserDto();
-            user.setUserId(resultSet.getString("user_id"));
-            user.setUserName(resultSet.getString("name"));
-            user.setUserRole(resultSet.getString("role"));
-            // Set other properties as needed
-
-            return user;
-        }
-
-        return null;
-    }
 
     /**
      * Updates user password for password reset functionality
@@ -91,13 +68,6 @@ public class QueryDAOImpl implements QueryDAO {
      * @throws SQLException if database error occurs
      * @throws ClassNotFoundException if driver not found
      */
-    @Override
-    public boolean updatePassword(String username, String newPassword) throws SQLException, ClassNotFoundException {
-        String sql = "UPDATE users SET password = ? WHERE name = ?";
-        int rowsAffected = CrudUtil.execute(sql, newPassword, username) ? 1 : 0;
-
-        return rowsAffected > 0;
-    }
 
     /**
      * Gets a list of all users
@@ -105,23 +75,6 @@ public class QueryDAOImpl implements QueryDAO {
      * @throws SQLException if database error occurs
      * @throws ClassNotFoundException if driver not found
      */
-    @Override
-    public List<UserDto> getAllUsers() throws SQLException, ClassNotFoundException {
-        String sql = "SELECT * FROM users";
-        ResultSet resultSet = CrudUtil.execute(sql);
-
-        List<UserDto> users = new ArrayList<>();
-        while (resultSet.next()) {
-            UserDto user = new UserDto();
-            user.setUserId(resultSet.getString("user_id"));
-            user.setUserName(resultSet.getString("name"));
-            user.setUserRole(resultSet.getString("role"));
-            // Set other properties as needed
-
-            users.add(user);
-        }
-        return users;
-    }
 
     @Override
     public int getAdoptedDogCount() throws SQLException, ClassNotFoundException {
