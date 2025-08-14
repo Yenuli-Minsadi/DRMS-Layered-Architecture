@@ -188,12 +188,12 @@ public class EmpVetsController implements Initializable {
             boolean isUpdated = vetBO.updateVet(vetDto);
             if (isUpdated) {
                 resetPage();
-                new Alert(Alert.AlertType.INFORMATION, "Vet Saved Successfully!").show();
+                new Alert(Alert.AlertType.INFORMATION, "Vet Updated Successfully!").show();
             } else {
-                new Alert(Alert.AlertType.ERROR, "Failed to save Vet").show();
+                new Alert(Alert.AlertType.ERROR, "Failed to update Vet").show();
             }
         } catch (Exception e) {
-            new Alert(Alert.AlertType.ERROR, "Failed to save Vet: " + e.getMessage()).show();
+            new Alert(Alert.AlertType.ERROR, "Failed to update Vet: " + e.getMessage()).show();
             e.printStackTrace();
 
         }

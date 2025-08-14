@@ -220,9 +220,9 @@ public class RequestCaseController implements Initializable {
 
                 if (isDeleted) {
                     resetPage();
-                    new Alert(Alert.AlertType.INFORMATION, "Customer deleted successfully.").show();
+                    new Alert(Alert.AlertType.INFORMATION, "Request deleted successfully.").show();
                 } else {
-                    new Alert(Alert.AlertType.ERROR, "Fail to delete customer.").show();
+                    new Alert(Alert.AlertType.ERROR, "Fail to delete request.").show();
                 }
             } catch (Exception e) {
                 e.printStackTrace();

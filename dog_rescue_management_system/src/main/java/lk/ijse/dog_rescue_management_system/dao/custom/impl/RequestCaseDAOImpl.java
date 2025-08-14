@@ -125,7 +125,7 @@ public class RequestCaseDAOImpl implements RequestCaseDAO {
     public boolean update(RequestCase entity) throws SQLException, ClassNotFoundException {
 
             return CrudUtil.execute(
-                    "update rescue_request set rescuer_id =?, request_date =?, request_status =?, location =?, reason = ?, urgency_level = ?, request_notes = ?, case_type = ? where request_id =?",
+                    "update rescue_request set rescuer_id =?, request_date =?, request_status =?, location =?, reason = ?, urgency_level = ?, request_notes = ?, case_type = ?, contact_number = ? where request_id =?",
                     entity.getRescuerId(),
                     entity.getRequestDate(),
                     entity.getRequestStatus(),
@@ -134,6 +134,7 @@ public class RequestCaseDAOImpl implements RequestCaseDAO {
                     entity.getUrgencyLevel(),
                     entity.getRequestNote(),
                     entity.getCaseType(),
+                    entity.getRequestContact(),
                     entity.getRequestId()
             );
     }
